@@ -1,66 +1,66 @@
 In shell scripting, you use variables within conditional statements to control the flow of your script based on the values stored in those variables.
 
-**Here's how variables are typically used in conditions:**
+Here's how variables are typically used in conditions:
 
-**1. Comparisons:**
+1. Comparisons:
 
-* **Equality:**
-   ```bash
-   if [ "$variable1" == "$variable2" ]; then
-       # Code to execute if variable1 is equal to variable2
-   fi
-   ```
+Equality:
 
-* **Inequality:**
-   ```bash
-   if [ "$variable1" != "$variable2" ]; then
-       # Code to execute if variable1 is not equal to variable2
-   fi
-   ```
+Bash
 
-* **Numerical Comparisons:**
-   ```bash
-   if [ "$variable1" -gt "$variable2" ]; then 
-       # Code to execute if variable1 is greater than variable2
-   fi
-   ```
-   (Use `-lt` for less than, `-ge` for greater than or equal to, `-le` for less than or equal to, `-eq` for equal to, and `-ne` for not equal to for numerical comparisons)
+if [ "$variable1" == "$variable2" ]; then
+    # Code to execute if variable1 is equal to variable2
+fi
+Inequality:
 
-**2. String Comparisons:**
+Bash
 
-* **Check if a string is empty:**
-   ```bash
-   if [ -z "$variable" ]; then
-       # Code to execute if the variable is empty
-   fi
-   ```
+if [ "$variable1" != "$variable2" ]; then
+    # Code to execute if variable1 is not equal to variable2
+fi
+Numerical Comparisons:
 
-* **Check if a string is not empty:**
-   ```bash
-   if [ -n "$variable" ]; then
-       # Code to execute if the variable is not empty
-   fi
-   ```
+Bash
 
-**3. File Tests:**
+if [ "$variable1" -gt "$variable2" ]; then 
+    # Code to execute if variable1 is greater than variable2
+fi
+(Use -lt for less than, -ge for greater than or equal to, -le for less than or equal to, -eq for equal to, and -ne for not equal to for numerical comparisons)
 
-* **Check if a file exists:**
-   ```bash
-   if [ -f "$filename" ]; then
-       # Code to execute if the file exists
-   fi
-   ```
-   (Use `-d` for directories, `-e` for existence of any file type, `-x` for executable files, etc.)
+2. String Comparisons:
 
-**Key Considerations:**
+Check if a string is empty:
 
-* **Quoting:** Always quote your variables within the `[` and `]` brackets to prevent unexpected behavior, especially if the variable might contain spaces or special characters.
-* **Spacing:** Maintain proper spacing around operators and variables for readability.
-* **Logical Operators:** Combine multiple conditions using logical operators like `&&` (and), `||` (or), and `!` (not).
+Bash
 
-**Example:**
+if [ -z "$variable" ]; then
+    # Code to execute if the variable is empty
+fi
+Check if a string is not empty:
 
-```bash
+Bash
+
+if [ -n "$variable" ]; then
+    # Code to execute if the variable is not empty
+fi
+3. File Tests:
+
+Check if a file exists:
+Bash
+
+if [ -f "$filename" ]; then
+    # Code to execute if the file exists
+fi
+(Use -d for directories, -e for existence of any file type, -x for executable files, etc.)
+Key Considerations:
+
+Quoting: Always quote your variables within the [ and ] brackets to prevent unexpected behavior, especially if the variable might contain spaces or special characters.
+Spacing: Maintain proper spacing around operators and variables for readability.
+Logical Operators: Combine multiple conditions using logical operators like && (and), || (or), and ! (not).
+Example:
+
+Bash
+
 #!/bin/bash
 
 user_input="yes"
@@ -70,6 +70,3 @@ if [ "$user_input" == "yes" ]; then
 else
     echo "User did not enter 'yes'."
 fi
-```
-
-By using variables effectively within conditional statements, you can create dynamic and flexible shell scripts that respond to different input values and situations.
