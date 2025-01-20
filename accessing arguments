@@ -1,0 +1,57 @@
+Command-Line Arguments in Shell Scripting
+
+Command-line arguments are values passed to a shell script when it's executed. They provide a way to make your scripts more flexible and adaptable to different situations.
+
+Accessing Command-Line Arguments:
+
+Shell scripts use special variables to access command-line arguments:
+
+$0: Represents the name of the script itself.
+$1: Represents the first argument passed to the script.
+$2: Represents the second argument, and so on.
+$#: Represents the total number of arguments passed to the script.
+$*: Represents all arguments as a single string.
+$@: Represents all arguments as individual strings.
+Example:
+
+Bash
+
+#!/bin/bash
+
+echo "Script name: $0"
+
+if [ $# -eq 0 ]; then
+  echo "No arguments provided."
+else
+  echo "Number of arguments: $#"
+  echo "First argument: $1"
+  echo "All arguments: $*"
+  echo "All arguments (individually): $@"
+fi
+How to Run the Script with Arguments:
+
+To execute this script with arguments, you would type something like this in your terminal:
+
+Bash
+
+./script.sh arg1 arg2 arg3
+Using Arguments in Your Script:
+
+You can use command-line arguments within your script to control its behavior. For example:
+
+Bash
+
+#!/bin/bash
+
+if [ "$1" == "hello" ]; then
+  echo "Hello, world!"
+elif [ "$1" == "goodbye" ]; then
+  echo "Goodbye!"
+else
+  echo "Unknown argument."
+fi
+Key Points:
+
+Command-line arguments make your scripts more versatile.
+Use the special variables $1, $2, ..., $#, $*, and $@ to access and manipulate arguments within your scripts.
+Always validate and handle unexpected input to prevent errors.
