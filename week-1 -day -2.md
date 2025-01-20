@@ -18,16 +18,15 @@ age=25
 
 ````
 
-*  **Accessing Variables**
+Accessing Variables
 
-* Use the variable name directly, preceded by a dollar sign ($).
+Use the variable name directly, preceded by a dollar sign ($).
 
-**Input and Output**
+Input and Output
+Reading user input: Use the `read` command to read values from the user.
+Displaying output: Use the `echo` command to display text on the screen.
 
-* **Reading user input:** Use the `read` command to read values from the user.
-* **Displaying output:** Use the `echo` command to display text on the screen.
-
-**Examples:**
+Examples:
 
 ```bash
 echo "Enter your name:"
