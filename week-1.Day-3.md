@@ -1,67 +1,89 @@
-Day 3: Shell Scripting - Control Structures
-Conditional Statements
+```markdown
+## Day 3: Shell Scripting - Control Structures
 
-  - if: Executes a block of code only if a specified condition is true.
-    
-    if [ condition ]; then
-        # Commands to execute if condition is true
-    fi
+Control structures allow you to control the flow of execution in your shell scripts. They enable you to make decisions based on conditions and repeat tasks as needed. Here's an overview of common control structures in shell scripting:
 
-  - if-else: Executes one block of code if the condition is true, and another block if it's false.
-    
-    if [ condition ]; then
-        # Commands to execute if condition is true
-    else
-        # Commands to execute if condition is false
-    fi
+### Conditional Statements
 
-  - if-elif-else: Handles multiple conditions sequentially.
-    
-    if [ condition1 ]; then
-        # Commands to execute if condition1 is true
-    elif [ condition2 ]; then
-        # Commands to execute if condition2 is true
-    else
-        # Commands to execute if none of the conditions are true
-    fi
+* **if statement:** Executes a block of code only if a specified condition is true.
 
-Looping Constructs
+```bash
+if [ condition ]; then
+  # Commands to execute if condition is true
+fi
+```
 
-  - for: Repeats a block of code for a specific number of times or over a set of values.
-    
-    for variable in list_of_values; do
-        # Commands to execute for each value in the list
-    done
+* **if-else statement:** Executes one block of code if the condition is true, and another block if it's false.
 
-  - while: Repeats a block of code as long as a given condition remains true.
-    
-    while [ condition ]; do
-        # Commands to execute as long as the condition is true
-    done
+```bash
+if [ condition ]; then
+  # Commands to execute if condition is true
+else
+  # Commands to execute if condition is false
+fi
+```
 
-  - until: Repeats a block of code as long as a given condition remains false.
-    
-    until [ condition ]; do
-        # Commands to execute as long as the condition is false
-    done
+* **if-elif-else statement:** Handles multiple conditions sequentially, allowing you to check for different scenarios.
 
-Case Statement
+```bash
+if [ condition1 ]; then
+  # Commands to execute if condition1 is true
+elif [ condition2 ]; then
+  # Commands to execute if condition2 is true
+else
+  # Commands to execute if none of the conditions are true
+fi
+```
 
-  - case: Executes different blocks of code based on the value of a variable.
-    case "$variable" in
-        value1)
-            # Commands to execute if variable equals value1
-            ;;
-        value2)
-            # Commands to execute if variable equals value2
-            ;;
-        *)
-            # Commands to execute if none of the above values match
-            ;;
-    esac
+### Looping Constructs
 
-Key Considerations
+* **for loop:** Repeats a block of code for a specific number of times or iterates over a set of values.
 
-  - Indentation: Use consistent indentation to improve readability and maintainability.
-  - Quoting: Always quote variables within conditional expressions to prevent unexpected behavior.
-  - Logical Operators: Combine multiple conditions using logical operators (&& for AND, || for OR, ! for NOT).
+```bash
+for variable in list_of_values; do
+  # Commands to execute for each value in the list
+done
+```
+
+* **while loop:** Repeats a block of code as long as a given condition remains true.
+
+```bash
+while [ condition ]; do
+  # Commands to execute as long as the condition is true
+done
+```
+
+* **until loop:** Repeats a block of code as long as a given condition remains false (opposite of while loop).
+
+```bash
+until [ condition ]; do
+  # Commands to execute as long as the condition is false
+done
+```
+
+### Case Statement
+
+* **case statement:** Executes different blocks of code based on the value of a variable.
+
+```bash
+case "$variable" in
+  value1)
+    # Commands to execute if variable equals value1
+    ;;
+  value2)
+    # Commands to execute if variable equals value2
+    ;;
+  *)
+    # Commands to execute if none of the above values match (default case)
+    ;;
+esac
+```
+
+### Key Considerations
+
+* **Indentation:** Consistent indentation is crucial for readability and maintainability of your scripts. Use proper indentation to define code blocks within control structures.
+* **Quoting:** Always quote variables within conditional expressions to prevent unexpected behavior due to special characters or spaces.
+* **Logical Operators:** Combine multiple conditions using logical operators like `&&` (AND), `||` (OR), and `!` (NOT) for complex decision-making in your scripts.
+
+By effectively using these control structures, you can write powerful shell scripts that automate tasks, handle different scenarios, and make informed decisions based on conditions.
+```
