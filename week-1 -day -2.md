@@ -18,7 +18,7 @@ age=25
 
 ````
 
-**Accessing Variables**
+*  **Accessing Variables**
 
 * Use the variable name directly, preceded by a dollar sign ($).
 
