@@ -53,7 +53,8 @@ echo "Hello, World!"
 
 **Additional Resources:**
 
-* **Shell Scripting Tutorial for Beginners:** [https://www.youtube.com/watch?v=7gNbVcRU4iA](https://www.youtube.com/watch?v=7gNbVcRU4iA)
+* **Shell Scripting Tutorial for Beginners:** [https://www.youtube.com/watch?v=7gNbVcRU4iA](https://www.youtube.com/watch?v=7gNbVcRU4iA) -English
+*  **Sell scripting-Telugu :** [https://www.youtube.com/watch?v=l4zfqDYYoGY&ab_channel=kkfunda]
 * **Introduction to Linux Shell and Shell Scripting:** [https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/](https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/)
 
 **Let me know if you'd like any additional explanations or exercises for Day 1!**
