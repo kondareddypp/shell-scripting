@@ -1,0 +1,116 @@
+Day 2: Shell Scripting Basics
+Objective
+To learn the basics of shell scripting, understand how to automate tasks in Linux/Unix environments, and write scripts relevant for DevOps workflows.
+
+Key Topics for Day 2
+What is a Shell Script?
+A shell script is a file containing a series of commands written for the shell (command-line interpreter).
+Common shells: Bash (Bourne Again Shell), Zsh, and others.
+Creating and Running a Shell Script
+Create a script file with .sh extension.
+Make it executable: chmod +x script.sh.
+Run it: ./script.sh.
+Basic Syntax
+Shebang: #!/bin/bash (specifies the shell to interpret the script).
+Comments: Use # to add comments.
+Variables
+Assign values: VAR="value".
+Access variables: $VAR.
+Input and Output
+echo "message": Print a message.
+read VAR: Accept user input.
+Control Structures
+if-else: Conditional statements.
+for and while: Loops for iteration.
+case: Multi-branch conditions.
+Basic Commands
+File operations: touch, rm, mv, cp.
+Directory operations: mkdir, rmdir, cd, ls.
+Viewing files: cat, head, tail.
+Functions
+Define reusable code blocks.
+Exit Codes
+$?: Check the exit status of the last command (0 for success, non-zero for failure).
+Debugging
+Use bash -x script.sh to debug a script.
+
+Example 1: Hello World Script
+bash
+CopyEdit
+#!/bin/bash
+# A simple Hello World script
+
+echo "Hello, World!"
+
+
+Example 2: User Input and Conditional Statement
+bash
+CopyEdit
+#!/bin/bash
+# Greet the user based on input
+
+echo "Enter your name:"
+read NAME
+if [ -z "$NAME" ]; then
+  echo "No name provided."
+else
+  echo "Hello, $NAME!"
+fi
+
+
+Example 3: File Operations
+bash
+CopyEdit
+#!/bin/bash
+# Create, move, and delete a file
+
+FILE="sample.txt"
+
+# Create a file
+touch $FILE
+echo "File $FILE created."
+
+# Check if the file exists and move it
+if [ -f $FILE ]; then
+  mv $FILE /tmp/
+  echo "File moved to /tmp/."
+else
+  echo "File does not exist."
+fi
+
+
+Example 4: Looping Through Files
+bash
+CopyEdit
+#!/bin/bash
+# List all files in a directory
+
+echo "Listing all files in the current directory:"
+for FILE in *; do
+  echo $FILE
+done
+
+
+DevOps-Relevant Example: Automation Script
+Restarting a Docker Container
+bash
+CopyEdit
+#!/bin/bash
+# Restart a Docker container
+
+CONTAINER_NAME="my_app"
+
+echo "Restarting Docker container: $CONTAINER_NAME"
+docker restart $CONTAINER_NAME
+
+if [ $? -eq 0 ]; then
+  echo "Container restarted successfully!"
+else
+  echo "Failed to restart the container."
+fi
+
+
+Suggested Tasks for Practice
+Write a script to create a backup of a directory.
+Automate a task like cleaning up log files older than 7 days.
+Create a script to check if a service (e.g., nginx) is running, and start it if not.
