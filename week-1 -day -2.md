@@ -1,3 +1,17 @@
+Day 2: Variables and Input/Output
+
+Defining and accessing variables (variable_name=value)
+System variables ($HOME, $PATH, $USER)
+Reading user input (read)
+Displaying output (echo, printf)
+Basic arithmetic operations (+, -, *, /)
+
+
+
+
+
+
+Examples :
 bash
 name="John Doe"
 age=25
